@@ -12,7 +12,7 @@ I recommend running this piped to a file. The final scores will come out in the 
 
 For me (running on a 2013 MacBook on Mojave), this ran in just under a minute (53.589s to be precise).
 
-TL;DR (aka "too long; didn't run") here is number of ways to draw every possible scoring hand:
+TL;DR (aka "too long; didn't run") here is the number of ways to draw every possible scoring hand:
 ```
 {
   '0': 3,
