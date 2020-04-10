@@ -64,15 +64,22 @@ const alphabet = Object.keys(tileAmounts).sort();
 const rack = [];
 const scores = {};
 const seen = {}; // avoid duplicates
+const generated = {}; // for output assistance
+
 // recursively generate every possible rack of tiles
 function addNextLetters(rack, nextLetterInd) {
-  if (rack.length >= 7 || nextLetterInd > alphabet.length) {
+  if (rack.length >= 7 || nextLetterInd >= alphabet.length) {
     score(rack.slice(0,7));
     return;
   }
   const nextLetter = alphabet[nextLetterInd];
   const amounts = tileAmounts[nextLetter];
-  for (let i = 0; i < amounts; i++) {
+  if (rack.length === 1 && !generated[rack[0]]) {
+    const curLetter = rack[0];
+    generated[curLetter] = true;
+    console.error(`generating hands for ${curLetter}...`);
+  }
+  for (let i = 0; i <= amounts; i++) {
     let nextRack = [...rack].concat(new Array(i).fill(nextLetter));
     if (nextRack.length > 7 || seen[nextRack.join('')]) {
       continue;
@@ -80,8 +87,6 @@ function addNextLetters(rack, nextLetterInd) {
     addNextLetters(nextRack, nextLetterInd+1);
   }
 }
-addNextLetters([], 0);
-
 function score(rack) {
   seen[rack.join('')] = true;
   total = 0;
@@ -95,3 +100,9 @@ function score(rack) {
     scores[total] = 1;
   }
 }
+// print this to a different output stream
+const d1 = new Date();
+addNextLetters([], 0);
+const d2 = new Date();
+console.error(`Ran in ${(d2.getTime() - d1.getTime())/1000}s`);
+console.error(scores);
