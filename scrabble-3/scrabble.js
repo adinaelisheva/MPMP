@@ -61,39 +61,39 @@ const tileAmounts = {
 // Don't trust Object.keys to give any specific ordering - sort it
 const alphabet = Object.keys(tileAmounts).sort();
 
-const rack = [];
+const hand = [];
 const scores = {};
 const seen = {}; // avoid duplicates
 const generated = {}; // for output assistance
 
-// recursively generate every possible rack of tiles
-function addNextLetters(rack, nextLetterInd) {
-  if (rack.length >= 7 || nextLetterInd >= alphabet.length) {
-    score(rack.slice(0,7));
+// recursively generate every possible hand of tiles
+function addNextLetters(hand, nextLetterInd) {
+  if (hand.length >= 7 || nextLetterInd >= alphabet.length) {
+    score(hand.slice(0,7));
     return;
   }
   const nextLetter = alphabet[nextLetterInd];
   const amounts = tileAmounts[nextLetter];
-  if (rack.length === 1 && !generated[rack[0]]) {
-    const curLetter = rack[0];
+  if (hand.length === 1 && !generated[hand[0]]) {
+    const curLetter = hand[0];
     generated[curLetter] = true;
     console.error(`generating hands for ${curLetter}...`);
   }
   for (let i = 0; i <= amounts; i++) {
-    let nextRack = [...rack].concat(new Array(i).fill(nextLetter));
-    if (nextRack.length > 7 || seen[nextRack.join('')]) {
+    let nextHand = [...hand].concat(new Array(i).fill(nextLetter));
+    if (nextHand.length > 7 || seen[nextHand.join('')]) {
       continue;
     }
-    addNextLetters(nextRack, nextLetterInd+1);
+    addNextLetters(nextHand, nextLetterInd+1);
   }
 }
-function score(rack) {
-  seen[rack.join('')] = true;
+function score(hand) {
+  seen[hand.join('')] = true;
   total = 0;
-  for (letter of rack) {
+  for (letter of hand) {
     total += tileValues[letter];
   }
-  console.log(`${rack} scores ${total}`);
+  console.log(`${hand} scores ${total}`);
   if (scores[total]) {
     scores[total]++;
   } else {
