@@ -6,7 +6,7 @@ See https://www.think-maths.co.uk/scrabble-puzzle
 Pre-question was how many ways can you get to 48?
 I decided to answer this for ALL possible totals.
 
-I recommended running this piped to a file. The final scores will come out in the console (on the error channel). Eg:
+I recommend running this piped to a file. The final scores will come out in the console (on the error channel). Eg:
 
 ```> node scrabble.js > output```
 
