@@ -68,8 +68,11 @@ const generated = {}; // for output assistance
 
 // recursively generate every possible hand of tiles
 function addNextLetters(hand, nextLetterInd) {
-  if (hand.length >= 7 || nextLetterInd >= alphabet.length) {
+  if (hand.length >= 7) {
     score(hand.slice(0,7));
+    return;
+  }
+  if (nextLetterInd >= alphabet.length) {
     return;
   }
   const nextLetter = alphabet[nextLetterInd];
