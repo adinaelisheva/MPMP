@@ -5,7 +5,7 @@ See https://www.think-maths.co.uk/BankBalance
 
 The question: you start with 2 deposits on days 1 and 2. Subsequently, a fibonacci-style increasing function is applied each day. What 2 deposits take the LONGEST time to hit exactly $1000000 in the bank?
 
-I just brute forced this. My original attempt took about an hour, but with a simple short-circuit, it takes about 0.9s!
+I mostly brute forced this, with some additional smarts built in. My original attempt took about an hour, but with a simple short-circuit, it takes about 0.9s!
 
 ```> node bank.js```
 
