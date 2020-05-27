@@ -11,4 +11,4 @@ The official puzzle was for 6 tokens on a 6x6 grid. I ran this up to 7 for fun. 
 
 #### Notes
 
-This only finds *A* solution, not *ALL* solutions. 
+This only finds *a* solution for a given grid, not *all* solutions. 
