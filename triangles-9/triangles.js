@@ -30,11 +30,11 @@ for (let i = -1*POINT_LIMIT; i < POINT_LIMIT; i++) {
       if (fourteen(triangle)) {
         continue;
       }
-      for (let x = 0; x < WAIT_LIMIT; x++) {
+      for (let x = 1; x <= WAIT_LIMIT; x++) {
         triangle = takeaway(triangle);
         const tStr = `${triangle[0]},${triangle[1]},${triangle[2]}`
         if (tStr === `0,7,7`) {
-          console.log(`[${originalTriangle}] reached [0,7,7] in ${x+1} moves`);
+          console.log(`[${originalTriangle}] reached [0,7,7] in ${x} moves`);
           if (x > maxX) {
             maxX = x;
             maxTriangle = otStr;

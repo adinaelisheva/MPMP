@@ -16678,4 +16678,4 @@
 [91,98,98] reached [0,7,7] in 3 moves
 [92,92,99] reached [0,7,7] in 1 moves
 [92,99,99] reached [0,7,7] in 3 moves
-From -100 to 100, the longest path to [0,7,7] was [-92,-99,97] which took 29 steps
+From -100 to 100, the longest path to [0,7,7] was [-92,-99,97] which took 30 steps
