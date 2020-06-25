@@ -7,7 +7,7 @@ This code checks from -100 to 100 to find every trio of numbers that, following 
 
 ```> node triangles.js > output```
 
-I also put a few examples and some stats in a sheet here: https://docs.google.com/spreadsheets/d/154Q04_0Mc1TqMctLvoDE7pYOFZRp1Z7YtCi7dmsREag/edit#gid=0 The average path length for -100 to 100 is 9.48, fun fact.
+I also put a few examples and some stats in a sheet here: https://docs.google.com/spreadsheets/d/154Q04_0Mc1TqMctLvoDE7pYOFZRp1Z7YtCi7dmsREag/edit#gid=0 The average path length for -100 to 100 is 9.48, fun fact. Data.csv has the data that seeded the stats tab on this sheet.
 
 Observations:
 
