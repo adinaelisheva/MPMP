@@ -3,7 +3,7 @@
 
 See https://www.think-maths.co.uk/avoidthesquare
 
-I recommend running this piped to a file. The timing will come out in the console (on the error channel). Eg:
+I recommend running this piped to a file. The timing and total board count info will come out in the console (on the error channel). Eg:
 
 ```> node squares.js > output```
 
