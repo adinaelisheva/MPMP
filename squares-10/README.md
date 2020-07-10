@@ -21,7 +21,7 @@ The first tie this algorithm found is the one I put in as my answer - it has som
  O  O  X  X  X 
 ```
 
-The list of every tie board is in output.txt
+The list of every tie board is in output.txt. There were 2704 tie boards, out of 5200299 total, or 0.05% ties.
 
 #### Algorithm Details
 

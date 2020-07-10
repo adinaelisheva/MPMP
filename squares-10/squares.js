@@ -81,17 +81,17 @@ let d2 = new Date();
 console.error(`Generated all ${boards.length} boards in ${(d2.getTime() - d1.getTime())/1000}s`);
 
 d1 = new Date();
-let foundOne = false;
+let tieCount = 0;
 for (board of boards) {
   if (doesBoardHaveSquare(board)) {
     continue;
   }
-  if (!foundOne) {
+  if (tieCount === 0) {
     d2 = new Date();
     console.error(`Found first tie board in ${(d2.getTime() - d1.getTime())/1000}s`);
-    foundOne = true;
   }
+  tieCount++;
   printBoard(board);
 }
 d2 = new Date();
-console.error(`Found all tie boards in ${(d2.getTime() - d1.getTime())/1000}s`);
+console.error(`Found all ${tieCount} tie boards in ${(d2.getTime() - d1.getTime())/1000}s`);
