@@ -21,7 +21,9 @@ The first tie this algorithm found is the one I put in as my answer - it has som
  O  O  X  X  X 
 ```
 
-The list of every tie board is in output.txt. There were 2704 tie boards, out of 5200299 total, or 0.05% ties.
+The list of every tie board is in output.txt. There were 2704 tie boards, out of 5200299 total, or 0.05% ties. 
+
+Of course, many of the non-tie boards would never happen in real play, as the game ends when a single square is formed. So any board with > 1 square is not "real", meaning the tie percent is actually higher than 0.05% of actual games. But this algorithm assumes pieces continue to be placed until the board is full.
 
 #### Algorithm Details
 
