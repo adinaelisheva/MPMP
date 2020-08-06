@@ -1,5 +1,3 @@
-const factorMap = {};
-
 for (let i = 1; ; i++) {
   const root = Math.sqrt(i);
   let numFactors = 0;
@@ -12,7 +10,6 @@ for (let i = 1; ; i++) {
       }
     }
   }
-  factorMap[i] = numFactors;
   console.log(`${i}: ${numFactors} factors`)
   if (numFactors === 64) {
     console.error(`${i} has 64 factors`);
