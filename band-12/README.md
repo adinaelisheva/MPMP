@@ -10,3 +10,5 @@ This is just "find a number with N factors" including 1 and N.
 Wrote a simple script to count numbers' factors until I found 64. The script outputs the factors of N to the console, so I recommend running this piped to a file. The final scores will come out in the console (on the error channel). Eg:
 
 ```> node band.js > output```
+
+The number of factors for every number between 1 and 7560 can be found in output.txt
