@@ -1,5 +1,5 @@
 ### Puzzle number 16
-#### How Odd Is Pascal'S Triangle?
+#### How Odd Is Pascal's Triangle?
 
 See https://www.think-maths.co.uk/pascaltriangle
 
